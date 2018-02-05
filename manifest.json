@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+  "name": "Twitter Unpoptefy",
+  "short_name": "Unpoptefy",
+  "version": "0.1",
+  "description": "FUCK",
+  "permissions": [
+    "storage",
+    "unlimitedStorage",
+    "tabs"
+  ],
+  "background": {
+    "scripts": ["background/js/index.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.twitter.com/*"],
+      "css": ["content_scripts/css/index.css"],
+      "js": ["content_scripts/js/index.js"]
+    }
+  ],
+  "browser_action": {
+    "default_popup": "default_popup/index.html"
+  }
+}
